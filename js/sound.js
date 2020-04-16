@@ -36,7 +36,6 @@ var sounds = (function(){
 
             setTimeout( () => {
                stop(audio);
-                //audio.load();
                 try { audio.play() } catch(e) {
                     console.log(e)
                 }
