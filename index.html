@@ -96,7 +96,7 @@
 <script src="https://cdn.pubnub.com/pubnub.js"></script>
 
 <!-- WebRTC SDK -->
-<script src="js/webrtc.js"></script>
+<script src="js/webrtc-v2.js"></script>
 <script src="js/sound.js"></script>
 <script>(function(){
 
@@ -158,7 +158,7 @@ var phone     = window.phone = PHONE({
 ,   media         : { video: { width:640, height:480 }, audio: true } // <--- Set Camera Resolution
 ,   publish_key   : 'pub-c-9522c020-469c-42cc-b22b-f4df4e2f25fc'
 ,   subscribe_key : 'sub-c-02b31e20-7357-11ea-bbea-a6250b4fd944'
-,   secure        : false, ssl: false
+,   secure        : true, ssl: false
 });
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
