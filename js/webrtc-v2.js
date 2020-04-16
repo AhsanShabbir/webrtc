@@ -394,7 +394,7 @@ const PHONE = window.PHONE = config => {
         let vid    = document.createElement('video');
         let talk   = get_conversation(number);
 
-        vid.setAttribute( 'autoplay',    'autoplay'    );
+        // vid.setAttribute( 'autoplay',    'autoplay'    );
         vid.setAttribute( 'playsinline', 'playsinline' );
         vid.srcObject = obj.streams[0];
 
