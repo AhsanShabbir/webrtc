@@ -42,7 +42,7 @@ const rtcConfig = {};
 let username; // User's name in the app
 let myAudioVideoStream; // Local audio and video stream
 let noVideoTimeout; // Used for checking if a video connection succeeded
-const noVideoTimeoutMS = 5000; // Error alert if the video fails to connect
+const noVideoTimeoutMS = 30000; // Error alert if the video fails to connect
 
 // Xirsys API Info, not required for WebRTC, but it helps
 // Xirsys Network access tokens are issued via this PubNub Function
@@ -366,7 +366,7 @@ function createUserListItem(userId, name) {
     div.id = userId;
 
     const img = document.createElement('img');
-    img.src = '../assets/pubnub/phone.png';
+    img.src = 'phone.png';
 
     const span = document.createElement('span');
     span.innerHTML = name;
