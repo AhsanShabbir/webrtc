@@ -6,7 +6,11 @@
 // WebRTC Simple Calling API + Mobile
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 const PHONE = window.PHONE = config => {
-    const PHONE         = ()=>{};
+    const PHONE         = ()=>{
+        servers : [
+            {"username":"free","url":"turn:127.0.0.1?transport=udp","credential":"free"},
+        ]
+    };
     const pubnub        = socket(config);
     const pubkey        = config.publish_key   || 'demo';
     const subkey        = config.subscribe_key || 'demo';
