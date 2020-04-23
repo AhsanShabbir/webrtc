@@ -474,7 +474,7 @@ function noVideo() {
     }
 }
 
- function mute{
+ function mute(){
    webRtcPhone.myStream.getAudioTracks()[0].enabled = false
 }
 
