@@ -107,6 +107,16 @@ const unmuteAudioEventHandler = (event) => {
     unmute();
   }
 
+
+  const pauseVideoEventHandler = (event) => {
+    pauseVideoFn();
+  }
+  
+  const resumeVideoEventHandler = (event) => {
+      resumeVideoFn();
+    }
+
+
 // Register a disconnect event handler when the close video button is clicked
 closeVideoButton.addEventListener('click', closeVideoEventHandler);
 
@@ -114,6 +124,9 @@ closeVideoButton.addEventListener('click', closeVideoEventHandler);
 
 muteAudio.addEventListener('click', muteAudioEventHandler);
 unmuteAudio.addEventListener('click', unmuteAudioEventHandler);
+
+pauseVideo.addEventListener('click', pauseVideoEventHandler);
+resumeVideo.addEventListener('click', resumeVideoEventHandler);
 
 
 const initWebRtcApp = () => {
@@ -461,13 +474,21 @@ function noVideo() {
     }
 }
 
- function mute(){
-   webRtcPhone.myStream.getVideoTracks()[0].enabled = false
+ function mute{
+   webRtcPhone.myStream.getAudioTracks()[0].enabled = false
 }
 
 function unmute(){
-    webRtcPhone.myStream.getVideoTracks()[0].enabled = true
+    webRtcPhone.myStream.getAudioTracks()[0].enabled = true
  }
+
+ function pauseVideoFn(){
+    webRtcPhone.myStream.getVideoTracks()[0].enabled = false
+ }
+ 
+ function resumeVideoFn(){
+     webRtcPhone.myStream.getVideoTracks()[0].enabled = true
+  }
 
 /**
  * Helper function to make an HTTP request wrapped in an ES6 Promise.
