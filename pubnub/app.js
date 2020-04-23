@@ -101,15 +101,19 @@ const closeVideoEventHandler = (event) => {
 
 const muteAudioEventHandler = (event) => {
   mute();
-  
 }
 
+const unmuteAudioEventHandler = (event) => {
+    unmute();
+  }
+
 // Register a disconnect event handler when the close video button is clicked
-closeVideoButton.addEventListener('click', muteVideoEventHandler);
+closeVideoButton.addEventListener('click', closeVideoEventHandler);
 
 //Register mute mic button event handler
 
 muteAudio.addEventListener('click', muteAudioEventHandler);
+unmuteAudio.addEventListener('click', unmuteAudioEventHandler);
 
 
 const initWebRtcApp = () => {
