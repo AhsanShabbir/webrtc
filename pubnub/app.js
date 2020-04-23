@@ -5,6 +5,13 @@ const remoteVideo = document.getElementById('remote-video');
 const videoModal = document.getElementById('video-modal');
 const closeVideoButton = document.getElementById('close-video');
 
+const muteAudio = document.getElementById('mute-audio');
+const unmuteAudio = document.getElementById('unmute-audio');
+
+const pauseVideo = document.getElementById('pause-video');
+const resumeVideo = document.getElementById('resume-video');
+
+
 const brokenMyVideo = document.getElementById('broken-my-video');
 const brokenSampleVideo = document.getElementById('broken-sample-video');
 
@@ -92,8 +99,18 @@ const closeVideoEventHandler = (event) => {
     webRtcPhone.disconnect(); // disconnects the current phone call
 }
 
+const muteAudioEventHandler = (event) => {
+  mute();
+  
+}
+
 // Register a disconnect event handler when the close video button is clicked
-closeVideoButton.addEventListener('click', closeVideoEventHandler);
+closeVideoButton.addEventListener('click', muteVideoEventHandler);
+
+//Register mute mic button event handler
+
+muteAudio.addEventListener('click', muteAudioEventHandler);
+
 
 const initWebRtcApp = () => {
     // WebRTC phone object event for when the remote peer's video becomes available.
@@ -439,6 +456,14 @@ function noVideo() {
         closeVideoEventHandler();
     }
 }
+
+ function mute(){
+   webRtcPhone.myStream.getVideoTracks()[0].enabled = false
+}
+
+function unmute(){
+    webRtcPhone.myStream.getVideoTracks()[0].enabled = true
+ }
 
 /**
  * Helper function to make an HTTP request wrapped in an ES6 Promise.
