@@ -4,6 +4,7 @@
  * @author Adam Bavosa <@ajb413>
  */
 
+ alert("included");
 import {
     newUuid,
     isValidConstructorConfig
