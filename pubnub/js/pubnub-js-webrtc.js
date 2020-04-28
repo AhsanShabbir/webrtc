@@ -3,8 +3,6 @@
  *     calling.
  * @author Adam Bavosa <@ajb413>
  */
-
- alert("included");
 import {
     newUuid,
     isValidConstructorConfig
@@ -99,15 +97,6 @@ class WebRtcPhone {
         const incomingCallChannel = [incomingCallEvent, myUuid].join('.');
         const callResponseChannel = [callResponseEvent, myUuid].join('.');
         const peerIceCandidateChannel = [peerIceCandidateEvent, myUuid].join('.');
-        
-        console.log('incoming channels')
-        console.log(incomingCallChannel);
-
-        console.log('callResponseChannel')``
-        console.log(callResponseChannel);
-
-        console.log('peerIceCandidateChannel')
-        console.log(peerIceCandidateChannel);
 
         // Subscribe to these channels to listen for events directed to me
         this.pubnub.subscribe({
