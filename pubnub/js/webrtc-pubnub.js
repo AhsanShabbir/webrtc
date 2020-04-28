@@ -247,6 +247,20 @@ var WebRtcPhone = function () {
         }).then(function () {
           var channel = [incomingCallEvent, userUuid].join('.');
 
+          console.log('calling -- channel ')
+          console.log(channel);
+
+          console.log('callId')
+          console.log(callId);
+
+          console.log('rtcConfig')
+          console.log(rtcConfig)
+
+          console.log('localDescription')
+          console.log(localDescription);
+
+          
+
           _this2.pubnub.publish({
             channel: channel,
             message: {
