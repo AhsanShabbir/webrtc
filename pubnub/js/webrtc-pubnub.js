@@ -184,12 +184,12 @@ var WebRtcPhone = function () {
     console.log('incoming channels')
         console.log(incomingCallChannel);
 
-        console.log('callResponseChannel')``
+        console.log('callResponseChannel')
         console.log(callResponseChannel);
 
         console.log('peerIceCandidateChannel')
         console.log(peerIceCandidateChannel);
-        
+
     this.pubnub.subscribe({
       channels: [incomingCallChannel, callResponseChannel, peerIceCandidateChannel]
     });
