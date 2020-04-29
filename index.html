@@ -297,6 +297,7 @@ PUBNUB.bind( 'keydown', chat_in, function(e) {
 // Update Local GUI
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 function add_chat( number, text ) {
+    console.log(text);
     if (!text.replace( /\s+/g, '' )) return true;
 
     var newchat       = document.createElement('div');
