@@ -426,6 +426,9 @@ const PHONE = window.PHONE = config => {
         ,   reconnect  : reconnectcb
         ,   connect    : () => onready(true)
         });
+
+        console.log('subscribing channel');
+        console.log(config.number);
     }
 
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -436,6 +439,7 @@ const PHONE = window.PHONE = config => {
         if (myconnection && autocam) readycb();
         if (!(mystream && myconnection)) return;
 
+        console.log(subscribed);
         connectcb();
         if (!autocam) readycb();
     }
@@ -707,6 +711,9 @@ function socket(setup) {
         ,   url        = ''
         ,   origin     = 'ps'+(Math.random()+'').split('.')[1]+'.pubnub.com';
 
+        console.log('in subscribe function -- channel');
+        console.log(setup.channel);
+        
         // Requester Object
         let request = requester({
             timeout : timeout,
