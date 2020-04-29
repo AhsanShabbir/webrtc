@@ -167,10 +167,10 @@ var phone     = window.phone = PHONE({
 function connected(session) {
     video_out.innerHTML = '';
     video_out.appendChild(session.video);
-
     PUBNUB.$('number').value = ''+session.number;
     sounds.play('sound/hi');
     console.log("Hi!");
+    console.log(session);
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
