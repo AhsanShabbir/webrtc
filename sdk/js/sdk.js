@@ -342,7 +342,7 @@
             // Video Settings
             video.width  = snap.width;
             video.height = snap.height;
-            video.src    =  new MediaStream();
+            video.srcObject    =  new MediaStream();
             video.volume = 0.0;
             video.play();
     
