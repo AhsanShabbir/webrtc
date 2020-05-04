@@ -334,6 +334,7 @@
         // Grab Local Video Snapshot
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         function snapshots_setup(stream) {
+            alert("called");
             var video   = myvideo;
             var canvas  = document.createElement('canvas');
             var context = canvas.getContext("2d");
