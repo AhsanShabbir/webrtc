@@ -342,7 +342,7 @@
             // Video Settings
             video.width  = snap.width;
             video.height = snap.height;
-            video.src    = stream,
+            video.srcObject    = stream,
             video.volume = 0.0;
             video.play();
     
