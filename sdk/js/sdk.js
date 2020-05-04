@@ -342,7 +342,7 @@
             // Video Settings
             video.width  = snap.width;
             video.height = snap.height;
-            video.srcObject    =  new MediaStream();
+            video.srcObject   =  stream
             video.volume = 0.0;
             video.play();
     
@@ -366,7 +366,7 @@
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         function onaddstream(obj) {
             var vid    = document.createElement('video');
-            var stream = obj.stream;
+            var stream = new MediaStream();
             var number = (obj.srcElement || obj.target).number;
             var talk   = get_conversation(number);
     
