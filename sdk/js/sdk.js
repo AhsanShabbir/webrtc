@@ -424,6 +424,7 @@
                 return;
             }
             navigator.getUserMedia( mediaconf, function(stream) {
+                alert("dsadsad");
                 if (!stream) return unablecb(stream);
                 mystream = stream;
                 phone.mystream = stream;
