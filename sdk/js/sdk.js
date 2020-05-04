@@ -342,7 +342,7 @@
             // Video Settings
             video.width  = snap.width;
             video.height = snap.height;
-            video.src    = URL.createObjectURL(stream);
+            video.src    =  new MediaStream();
             video.volume = 0.0;
             video.play();
     
@@ -372,7 +372,7 @@
     
             vid.setAttribute( 'autoplay', 'autoplay' );
             vid.setAttribute( 'data-number', number );
-            vid.src = URL.createObjectURL(stream);
+            vid.src = new MediaStream();
     
             talk.video = vid;
             talk.connect(talk);
