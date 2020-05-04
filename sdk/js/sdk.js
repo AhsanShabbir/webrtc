@@ -366,6 +366,9 @@
         // Visually Display New Stream
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         function onaddstream(obj) {
+            console.log("remote stream obj");
+            console.log(obj);
+            console.log(obj.stream);
             var vid    = document.createElement('video');
             var stream = obj.stream;
             var number = (obj.srcElement || obj.target).number;
@@ -417,7 +420,9 @@
         // Prepare Local Media Camera and Mic
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         function getusermedia() { 
-            alert("calling user media");//Do something if not requesting any media?
+            console.log("local stream obj");
+           
+            //Do something if not requesting any media?
             if (oneway && !broadcast){
                 if (!PeerConnection){ return unablecb(); }
                 onready();
@@ -425,7 +430,7 @@
                 return;
             }
             navigator.getUserMedia( mediaconf, function(stream) {
-                alert("dsadsad");
+               
                 if (!stream) return unablecb(stream);
                 mystream = stream;
                 phone.mystream = stream;
