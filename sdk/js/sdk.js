@@ -373,7 +373,7 @@
     
             vid.setAttribute( 'autoplay', 'autoplay' );
             vid.setAttribute( 'data-number', number );
-            vid.src = stream;
+            vid.srcObject = stream;
     
             talk.video = vid;
             talk.connect(talk);
@@ -416,7 +416,8 @@
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
         // Prepare Local Media Camera and Mic
         // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-        function getusermedia() { //Do something if not requesting any media?
+        function getusermedia() { 
+            alert("calling user media");//Do something if not requesting any media?
             if (oneway && !broadcast){
                 if (!PeerConnection){ return unablecb(); }
                 onready();
